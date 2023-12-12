@@ -1,0 +1,519 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+    --cor-primaria: #538EE0;
+    --cor-escuro: #030000;
+    --cor-secundaria: #2F5994;    
+    --cor-fundo-clara: #FFFFFF;
+    --cor-fundo-escura: #BBBBBB;
+    --cor-texto-claro: #FFFFFF;
+    --cor-texto-escura: #444444;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: Audiowide, Calibri, Arial, sans;
+    font-size: 16px;
+    box-sizing: border-box;
+    
+}
+p, a{
+    font-family: Calibri, sans;
+}
+
+html {                  
+    font-size: 16px;
+}
+
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;  
+}
+
+a:hover {   
+    color: var(--cor-escuro);
+    text-decoration: underline; 
+}
+
+header {
+    background-color: var(--cor-escuro);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a #logo{
+    width: 300px;
+
+}
+
+#titulo{
+    color: var(--cor-fundo-clara);
+    text-align: center;
+    font-family: Audiowide, Calibri, Arial, sans;
+    font-size: 30px;
+    margin: auto;
+}
+
+#social {
+    background-color: transparent;  
+    display: flex;
+    align-items: center;
+}
+
+#social img {
+    width: 32px;
+}
+
+#social a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#social a span {
+    margin-left: 6px;
+    display: none; 
+}
+
+#social a:hover span {
+    display: inline;    
+}
+
+input, textarea, select {
+    font-family: Calibri, Arial, sans;
+}
+
+nav ul li {
+    display: inline-block;  
+    margin: 10px;
+}
+
+nav {
+    background-color: var(--cor-secundaria);  
+    color: var(--cor-texto-claro);             
+}
+
+#menu {
+    padding: 0 20px;
+}
+
+#menu li {
+    margin: 12px 0;
+}
+
+#menu a {
+    height: 100%;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    transition: 300ms;
+    background-color: var(--cor-secundaria);
+    font-family: Audiowide, Calibri, Arial, sans;;
+}
+
+#lupa {
+    height: 16px;        
+}
+
+#menu a:hover {
+    filter: brightness(0.8);
+    text-decoration: none;
+}
+
+#menu-contraido {
+    display: inline-block;
+    position: relative;    
+}
+
+#menu-contraido input, #menu-contraido span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+#menu-contraido input {
+    z-index: 100; 
+    opacity: 0; 
+    display: none;  
+}
+
+#menu-contraido span {
+    display: block;
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+    border: 2px solid var(--cor-fundo-clara);
+    background-image: url('img/menu-icon-48x48.png');
+    background-size: 40px 40px;
+    background-position: center center;
+    cursor: pointer; 
+    display: none;
+}
+
+
+#menu-contraido input:checked ~ span {
+    background-image: url('img/close-icon-48x48.png');
+}
+
+#content {
+    background-color: var(--cor-escuro);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+main, aside {
+    background-color: var(--cor-texto-claro);
+    padding: 24px;
+    margin-bottom: 20px;    
+    border-radius: 10px;    
+    box-shadow: 6px 6px 15px rgba(47, 89, 148, 1);
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+main {
+    width: 75%;
+}
+
+#fale{
+    width: 615px;
+    margin: auto;
+    background-color: var(--cor-primaria);
+    padding: 15px;
+    border-radius: 10px;
+    border: var(--cor-secundaria) solid;
+}
+
+.formulario{
+    background-color: var(--cor-primaria);
+}
+
+#fale fieldset{
+    border: none;
+}
+
+#fale legend{
+    font-size: 35px;
+    margin: auto;
+      
+}
+
+#fale p{
+    margin: 15px 20px;
+}
+
+aside {
+    margin-left: 20px;
+    background-color: var(--cor-fundo-escura);
+    width: 25%;
+}
+
+main article, aside article {   
+    margin: 24px 0;     
+}
+
+main > h1, aside > h1 {          
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+}
+
+article > h1 {    
+    margin-bottom: 6px;
+}
+
+article > h1 > a {
+    font-size: 1.5rem;      
+}
+
+article > p {
+    color: var(--cor-texto-escura);
+}
+
+article > h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase; 
+}
+
+.destaque {
+    background-color: var(--cor-secundaria);
+    padding: 24px;
+    border-radius: 4px;
+}
+
+.destaque p {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+.destaque > h1 > a {
+    font-size: 2.5rem;
+}
+
+.destaque > h2 {
+    font-size: 1rem;
+}
+
+.foto-texto img {
+    width: 450px;
+    height: 450px;
+    margin-right: 24px;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+.foto-texto {
+    display: flex;
+    flex-direction: row;
+}
+
+.individual h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin: 12px 0;
+}
+
+.individual p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.individual .foto-texto {
+    flex-direction: column;
+}
+
+.individual .foto-texto img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.individual .foto-texto p {
+    margin: 12px 0 36px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+aside > article > div{
+     max-width: 440px;
+     margin: auto auto;
+     padding:10px 20px;
+ }
+
+aside > article > div > img {
+    display: block;    
+    margin: 0 auto;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+aside > article > div > h1 > a{
+    font-size: 1.5rem;
+    color: #000;
+    display:block;
+    margin: 5px auto;
+    max-width: 100%;
+}
+
+
+aside > article > div > ul >li > h2 > a{
+    font-size: 1.2rem;
+    font-family: Calibri, Arial, sans;
+    color: #000;
+    display:block;
+    margin: 5px auto;
+    max-width: 100%;
+}
+
+
+
+aside > article > div > h1 {
+    margin-top: 6px;
+}
+
+
+footer {
+    background-color: var(--cor-escuro);
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 5px solid var(--cor-secundaria);
+}
+
+footer a {
+    color: #ffffff;
+    
+}
+
+footer a:hover{
+    color: var(--cor-primaria)
+}
+
+footer ul li {
+    display: inline-block;  
+    padding: 0 12px;
+    border-right: 2px solid #ffffff;
+}
+
+
+footer ul li:last-child {
+    border-right: none;
+}
+
+footer img {
+    width: 200px;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1020px) { 
+    main {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+    .foto-texto {
+        flex-direction: column; 
+    }
+    .destaque img {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+
+    #fale {
+        width: 400px;
+    }
+
+    #fale textarea{
+        width: 100%;
+   }
+
+    #fale p input{
+        width: 100%;
+    }
+
+    #fale legend{
+        margin: auto;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        min-height: 88px;
+        padding: 0;
+    }
+    #menu ul {
+        margin-top: 50px;
+    }
+    #menu ul li { 
+        display: block;
+        margin: 6px 0;
+    }
+    #menu a {
+        width: 100%;
+        display: block;
+    }
+    #menu-contraido {
+        margin-top: 24px;
+        width: 100%;
+    }
+    #menu-contraido ul {
+        display: none;
+    }
+    /* Mostra o botão do menu */
+    #menu-contraido input, #menu-contraido span {
+        display: block;
+        left: 20px;
+    }
+    #menu-contraido input:checked ~ ul {
+        display: block;
+    }
+
+    #content {
+        flex-direction: column; 
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #titulo{
+        text-align: center;
+        font-size: 32px;
+    }
+
+    
+
+    aside > article > div > h1 {
+        text-align: center;
+    }
+
+
+
+    .destaque img {
+       
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > * {   
+        margin-bottom: 12px;
+    }
+    footer ul li:first-child {  
+        padding-left: 0;
+    }
+    footer address {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header img {
+        max-width: 100%;
+    }
+
+    #titulo{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .destaque > h1 > a, .individual h1 {
+        font-size: 2rem;
+    }
+
+    #fale{
+        width: 270px;
+    }
+
+    #fale p{
+        margin: 10px 0px;
+    }
+
+    #fale textarea{
+        width: 235px;
+   }
+
+    #fale p input{
+        width: 235px;
+    }
+    
+}
